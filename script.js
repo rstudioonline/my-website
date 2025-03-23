@@ -355,3 +355,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // Also check on window scroll
     window.addEventListener('scroll', checkVideoVisibility, { passive: true });
 });
+
+
+
+if (navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i)) {
+  // Mobile device detected
+  if (window.location.search.indexOf('desktop=1') > -1) {
+    // User requested desktop site
+    alert("This site is not optimized for desktop view on mobile. You may experience usability issues.");
+  }
+}
